@@ -421,10 +421,10 @@ def inscricao():
 
                 qry_insert = f"""INSERT INTO backyard.2025_atletas (
                                  idatleta, email, cpf, nome, dtnascimento, ncelular, sexo, camiseta, tipo_corrida, cidade, estadoUf, equipe,
-                                   vlinscricao, vlpago, dtinscricao, ativo, fstatus )
+                                   vlinscricao, vlpago, dtinscricao, ativo, fstatus, idade )
                                  VALUES (
-                                        {idatleta},"{input_email}","{ncpf}",upper("{input_nome + ' ' + input_sobrenome}"),"{datanasc}","{ncelular}",
-                                        "{sexo}","{input_camiseta}","{input_tipoprova}","{input_cidade}","{input_estado}","{input_equipe}",{vl_inscricao}, 0, "{dataf}", 'S','N') """
+                                        {idatleta},"{input_email}","{ncpf}",upper("{input_nome + ' ' + input_sobrenome}"),"{datanasc}","{ncelular}","{sexo}","{input_camiseta}",
+                                        "{input_tipoprova}","{input_cidade}","{input_estado}","{input_equipe}",{vl_inscricao}, 0, "{dataf}", 'S','N',{idade}) """
 
 
                 cursor = conexao.cursor()
